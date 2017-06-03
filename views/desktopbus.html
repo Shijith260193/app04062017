@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+ <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+  <meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="assets/coupongrid/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="assets/coupongrid/css/component.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
+  <link rel="stylesheet" href="assets/et-line-font-plugin/style.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">  
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/datepicker/datepickk.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+     <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/theme/css/bus.css">
+  <link rel="stylesheet" href="assets/mobirise-gallery/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ 
+ 
+<style>
+
+.active {
+    border-bottom:2px solid black;
+}
+.material-icons{
+  font-size:30px;
+  color: #FB8C00;
+}
+    
+   
+</style>
+  
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<section id="menu-0">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top">
+        <div class="container">
+
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
+
+                    <div class="navbar-brand">
+                        <a class="" href="/"><img src="assets/images/Logo/logo.png" height="100px" width="100px"></a>
+                    </div>
+
+                </div>
+                <div class="mbr-table-cell">
+
+                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="hamburger-icon"></div>
+                    </button>
+
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li id="products" class="nav-item"><a class="nav-link link" href="index.html"><span><i class="material-icons">add_shopping_cart</i></span>&nbsp;PRODUCTS</a></li><li class="nav-item"><a class="nav-link link" href="javascript:void(0);"><i class="material-icons">flight</i>&nbsp;FLIGHTS</a></li><li class="nav-item"><a class="nav-link link" href="javascript:void(0);"><i class="material-icons">hotel</i>&nbsp;HOTELS</a></li><li class="nav-item"><a class="nav-link active link" href="javascript:void(0);"><i class="material-icons">directions_bus</i>&nbsp;BUS</a></li></ul>
+                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="close-icon"></div>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</section>
+   
+<div class="w3-container" style="margin-top:150px;background:rgba(255,255,255,0.2) url(assets/images/busbglarge.jpg) no-repeat right top;background-size: 100% 100%;">
+    <form ng-submit="desktopchange();">
+        <div style="max-width:400px;min-width:400px;margin:0 auto;">
+<div style="max-width:400px;min-width:400px;margin:0 auto;" class="w3-row-padding">
+  
+<!-- Source Field -->    
+<div id="morphsearch1" class="morphsearch2" class="w3-third">
+    <div class="morphsearch-form ui-widget">
+  <input ng-keyup="complete()" style="padding-left:40px;text-transform: capitalize;" class="tags w3-input w3-large w3-border w3-round-large" required type="text" placeholder="From" ng-model="source" oninvalid="this.setCustomValidity('Enter Source')">
+       <span class="navicon"> <i class="material-icons">near_me</i></span>
+        </div>
+    	
+				<span class="morphsearch-close"></span>
+            </div>
+    
+    
+  <div class="" >
+   <span  ng-click="changeDirection();" class="changeicon"><i class="material-icons">swap_vert</i></span>
+  </div>
+<!-- Destination Field -->    
+  <div id="morphsearch" class="morphsearch" class="w3-third" >
+      <div class="morphsearch-form ui-widget">
+        <input ng-keyup="complete()" style="padding-left:40px;text-transform: capitalize;" required class="w3-input w3-border w3-large w3-round-large tags" type="text" placeholder="To" ng-model="destination" oninvalid="this.setCustomValidity('Enter Destination')">
+          <span class="navicon"> <i class="material-icons">near_me</i></span>
+          </div>
+      
+		<span class="morphsearch-close"></span>
+  </div>
+ </div> 
+    <br>
+    <br>
+     <div>
+  <div class="w3-half">
+    <input style="cursor:pointer;padding-left:40px;font-size:13px;height:45px;vertical-align: middle;"  class="w3-input w3-border w3-round-large datepicker" ng-model="dateofjourney" type="text" id="dateofjourney" placeholder="Date Of Journey" required oninvalid="this.setCustomValidity('Enter Date Of Journey')"/>
+      <span class="dateicon"><i class="material-icons">date_range</i></span>
+  </div>
+  <div class="w3-half">
+    <input style="cursor:pointer;padding-left:40px;font-size:13px;height:45px;vertical-align: middle;" class="w3-input w3-border w3-round-large datepicker" ng-model="dateofreturn" id="dateofreturn" type="text" placeholder="Date Of Return(optional)" readonly="readonly"/>
+      <span class="dateicon"><i class="material-icons">date_range</i></span>
+  </div>
+</div>        
+      <br><br>      
+    <div style="margin-bottom:30px;display:inline;">
+  
+   <br>
+        <p><button class="w3-btn w3-block w3-round" style="background-color:#37C88D" type="submit" >Search Buses</button></p>
+       
+</div>
+            </div>
+ 
+   
+    </form>
+    </div>
+   
+ 
+    <div class="w3-container" style="background-color:smokewhite;" >
+        <br>
+        
+    <div class="w3-card-4 w3-center" style="width:70%;margin:0 auto;">
+                <p>Exciting Offers</p>
+    </div>
+        <br>
+      
+        <div class="w3-container" ng-repeat="coupon in coupons" ng-hide="myVar" style="">
+           
+    <div class="w3-card-4" style="width:60%;margin:0 auto;">
+    <header class="w3-container w3-light-grey">
+      <h3>{{coupon.website}}</h3>
+    </header>
+    <div class="w3-container" >
+      <p class="w3-center">CODE : {{coupon.Code | uppercase}}</p>
+      <hr>
+      <img ng-src="{{coupon.image}}" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:100px">
+      <p>{{coupon.details}}</p><br>
+    </div>
+    
+  </div>
+            <br>
+     </div>           
+            
+
+</div>
+    
+
+<script src="assets/datepicker/datepickk.min.js"></script>
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="assets/tether/tether.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/viewport-checker/jquery.viewportchecker.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+  
+    <script src="assets/coupongrid/js/modernizr.custom.js"></script>
+  <script src="assets/masonry/masonry.pkgd.min.js"></script>
+  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+    <script src="assets/coupongrid/js/classie.js"></script>
+    <script src="assets/coupongrid/js/scripts.js"></script>
+    <script src="assets/coupongrid/js/angular.js"></script>
+    <script src="assets/coupongrid/js/arrayfile.js"></script>
+ 
+    
+      
+    <script type="text/javascript">
+		   $.datepicker.setDefaults({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: 'yy/mm/dd'});
+    $('#dateofjourney').datepicker({
+        minDate: '+0',
+        onSelect: function(dateStr) {
+            var min = $(this).datepicker('getDate') || new Date(); // Selected date or today if none
+            var max = new Date(min.getTime());
+            min.setDate(min.getDate() + 1);
+            max.setMonth(max.getMonth() + 2); // Add one month
+            $('#dateofreturn').datepicker('option', {minDate: min, maxDate: max});
+        }
+    });
+    $('#dateofreturn').datepicker({
+        minDate: '+0',
+        maxDate: '+3m',
+        onSelect: function(dateStr) {
+            var max = $(this).datepicker('getDate'); // Selected date or null if none
+            $('#dateofjourney').datepicker('option', {maxDate: max });
+        }
+    });
+	</script>
+   
+    
+  <input name="animation" type="hidden">
+  </body>
+</html>

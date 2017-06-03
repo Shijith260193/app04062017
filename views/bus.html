@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v3.12.1, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+   <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+  <meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="assets/coupongrid/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="assets/coupongrid/css/component.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
+  <link rel="stylesheet" href="assets/et-line-font-plugin/style.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/datepicker/datepickk.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+     <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/theme/css/bus.css">
+  <link rel="stylesheet" href="assets/mobirise-gallery/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+<style>
+
+.active {
+    border-bottom:2px solid black;
+}
+.material-icons{
+  font-size:30px;
+  color: #FB8C00;
+}
+</style>
+  
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<section id="menu-0">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top">
+        <div class="container">
+
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
+
+                    <div class="navbar-brand">
+                        <a class="" href="/"><img src="assets/images/Logo/logo.png" height="100px" width="100px"></a>
+                    </div>
+
+                </div>
+                <div class="mbr-table-cell">
+
+                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="hamburger-icon"></div>
+                    </button>
+
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li id="products" class="nav-item"><a class="nav-link link" href="#/"><span><i class="material-icons">add_shopping_cart</i></span>&nbsp;PRODUCTS</a></li><li class="nav-item"><a class="nav-link link" href="javascript:void(0);"><i class="material-icons">flight</i>&nbsp;FLIGHTS</a></li><li class="nav-item"><a class="nav-link link" href="javascript:void(0);"><i class="material-icons">hotel</i>&nbsp;HOTELS</a></li><li class="nav-item"><a class="nav-link active link" href="javascript:void(0);"><i class="material-icons">directions_bus</i>&nbsp;BUS</a></li></ul>
+                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="close-icon"></div>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</section>
+    <div class="wrap">
+  <div class="loading">
+    <div class="bounceball"></div>
+    <div class="text">NOW LOADING</div>
+  </div>
+</div>
+<div class="w3-container" style="background:rgba(255,255,255,0.2) url(assets/images/bg1.jpg) no-repeat right top;background-size: 100% 100%;">
+    <form ng-submit="change();">
+<div style="margin-top:150px;" class="w3-row-padding">
+  
+<!-- Source Field -->    
+<div id="morphsearch1" class="morphsearch2" class="w3-third">
+    <div class="morphsearch-form">
+  <input class="morphsearch-input w3-input w3-large w3-border w3-round-large" required type="text" placeholder="From" ng-model="source" autocomplete="off" style="text-transform:capitalize">
+        </div>
+    		<div class="morphsearch-content">
+					<div class="dummy-column">
+						<h2>Cities</h2>
+						<table style="width:100%;">
+						<tr ng-click="changeSource(city)" style="cursor:pointer;border-bottom: 1px solid green;" ng-repeat="city in cities | filter:source:startsWith | limitTo : 7  track by $index" >
+      <td><br><a style="cursor:pointer;padding:0px;text-decoration:none;" ng-bind="(city | capitalize)"></a></td>
+      </tr>
+		</table>
+				</div>
+    </div><!-- /morphsearch-content -->
+				<span class="morphsearch-close"></span>
+            </div>
+    
+    
+  <div class="" >
+   <span ng-click="changeDirection();" class="changeicon"><i class="material-icons">&#xe86a;</i></span>
+  </div>
+<!-- Destination Field -->    
+  <div id="morphsearch" class="morphsearch" class="w3-third" >
+      <div class="morphsearch-form">
+<input required class="morphsearch-input w3-input w3-border w3-large w3-round-large" type="text" placeholder="To" ng-model="destination" autocomplete="off" style="text-transform:capitalize">
+          </div>
+      	<div class="morphsearch-content">
+					<div class="dummy-column">
+						<h2>Cities</h2>
+						<table style="width:100%;">
+						<tr ng-click="changeDestination(city)" style="cursor:pointer;border-bottom: 1px solid green;" ng-repeat="city in cities | filter:destination:startsWith | limitTo : 7  track by $index" >
+      <td><br><a style="padding:0px;text-decoration:none;" ng-bind="(city | capitalize)"> </a></td>
+      </tr>
+		</table>
+				</div>
+		</div><!-- /morphsearch-content -->
+		<span class="morphsearch-close"></span>
+  </div>
+    
+    
+  
+ </div> 
+    <br>
+    <br>
+    <div class="w3-container" style="margin-bottom:30px;">
+    <div class="embed-submit-field" id='dtpickerdemo'>
+      <input class="w3-input w3-border w3-large w3-round-large" ng-model="dateofjourney" type="text" placeholder="Date Of Journey" onclick="closeOnSelectDemo()" id="seldate" readonly="readonly"/>
+      <button type="button" ng-click="changedate();">Tomorrow</button>
+    </div>
+        <br>
+        <p><button class="w3-btn w3-block w3-round" style="background-color:#37C88D" type="submit" >Search Buses</button></p>
+       
+</div>
+    </form>
+    </div>
+    <div class="w3-container" style="background-color:smokewhite;" >
+        <br>
+        
+    <div class="w3-card-4 w3-center">
+                <p>Exciting Offers</p>
+    </div>
+        <br>
+        <div ng-hide="myVar">
+				<ul class="cbp-ig-grid" ng-repeat="coupon in coupons">
+                 <li style="background:url({[{coupon.image}]}) no-repeat right top;background-size: 100% 100%;">
+						<a href="javascript:void(0);">
+                            <h3 class="cbp-ig-icon" ng-bind="coupon.website"></h3>
+							<h3 class="cbp-ig-title" ng-bind="coupon.details"></h3>
+							<span class="cbp-ig-category">Code : <span ng-bind="coupon.Code"></span></span>
+						</a>
+                    </li>
+				</ul>
+			</div>
+		</div>
+  
+    
+   
+        
+	
+
+
+
+<script src="assets/datepicker/datepickk.min.js"></script>
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+ <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/viewport-checker/jquery.viewportchecker.js"></script>
+  
+    <script src="assets/coupongrid/js/modernizr.custom.js"></script>
+  <script src="assets/masonry/masonry.pkgd.min.js"></script>
+  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+    <script src="assets/coupongrid/js/classie.js"></script>
+    <script src="assets/coupongrid/js/scripts.js"></script>
+    <script src="assets/coupongrid/js/angular.js"></script>
+    <script src="assets/coupongrid/js/arrayfile.js"></script>
+ 
+    
+    <script>
+ 
+    
+    
+    $(window).load(function() {
+		// Animate loader off screen
+		$(".wrap").fadeOut("slow");
+	});
+    
+    </script>  
+    
+    
+    
+<script>
+	var datepicker = new Datepickk();
+    datepicker.setDate = new Date();
+    var d = new Date();
+    d.setDate(d.getDate() - 1);
+    datepicker.minDate = d;
+ 					function closeOnSelectDemo(){
+						datepicker.unselectAll();
+                        datepicker.closeOnSelect = true;
+						console.log(datepicker.closeOnSelect);
+						datepicker.onSelect = function(checked){
+                            document.getElementById("seldate").value = this.toLocaleDateString("en-ZA");
+						};                        
+						datepicker.onClose = function(){
+							datepicker.closeOnSelect = false;
+							datepicker.onClose = null;
+						}
+						datepicker.show();
+					}
+</script> 
+    
+  <input name="animation" type="hidden">
+  </body>
+</html>

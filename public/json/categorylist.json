@@ -1,0 +1,7 @@
+{"data":[
+    {"mobiles":["mobiles","tablet","landline-phones"]},
+        {"computers":["laptops","desktop"]},
+        {"appliances":["irons","washing-machines","refrigerators","air-conditioner","vacuum-cleaners","inverters-batteries","voltage-stabilizers","mixers","microwave-oven","water-purifiers","emergency-light"]},
+        {"personalcare":["shavers","trimmers","hair-dryers","hair-curlers","electric-toothbrushes","hair-stylers","epilators"]},
+        {"tv":["smart-tv","tv","remote-controls","ipod-mp3","home-theaters","video-players","projectors","voice-recorders","sound-amplifiers","boom-boxes","fm-radio"]}
+]}

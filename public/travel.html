@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v3.12.1, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/images/logo/favicon.png" type="image/png">
+  <meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="assets/coupongrid/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="assets/coupongrid/css/component.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
+  <link rel="stylesheet" href="assets/et-line-font-plugin/style.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/datepicker/datepickk.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+     <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/theme/css/bus.css">
+  <link rel="stylesheet" href="assets/mobirise-gallery/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<style>
+
+.active {
+    border-bottom:2px solid black;
+}
+.material-icons{
+  font-size:30px;
+  color: #FB8C00;
+}
+</style>
+  
+</head>
+<body style="background-color:honeydew;" ng-app="myApp" ng-controller="customersCtrl">
+<section id="menu-0">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top">
+        <div class="container">
+
+            <div class="mbr-table">
+                <div class="mbr-table-cell">
+
+                    <div class="navbar-brand">
+                        <a class="" href="/"><img src="assets/images/Logo/logo.png" height="100px" width="100px"></a>
+                    </div>
+
+                </div>
+                <div class="mbr-table-cell">
+            <table class="w3-centered w3-border" style="background:grey;width:100%;border:1px solid black;">
+            <thead>
+           <tr> <th width="100%" class=" w3-border"><a style="text-decoration:none;"><span>{{source | capitalize}} </span><i class="material-icons" style="font-size:15px;">trending_flat</i> {{destination | capitalize}}</a></th></tr><tr><th class=" w3-border" width="100%"><a style="text-decoration:none;"><i class="material-icons" style="font-size:15px;">date_range</i>{{doj | date}}</a></th></tr>
+            </thead></table>
+       
+                    
+                </div>
+                <div class="mbr-table-cell">
+
+                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="hamburger-icon"></div>
+                    </button>
+
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li id="products" class="nav-item"><a class="nav-link link" href="index.html"><span><i class="material-icons">add_shopping_cart</i></span>&nbsp;PRODUCTS</a></li><li class="nav-item"><a class="nav-link link" href="javascript:void(0);"><i class="material-icons">flight</i>&nbsp;FLIGHTS</a></li><li class="nav-item"><a class="nav-link link" href="javascript:void(0);"><i class="material-icons">hotel</i>&nbsp;HOTELS</a></li><li class="nav-item"><a class="nav-link active link" href="bus.html"><i class="material-icons">directions_bus</i>&nbsp;BUS</a></li></ul>
+                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="close-icon"></div>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</section>
+    <section>
+    <div style="margin-top:94px;cursor:pointer;" class="">
+        <table class="w3-centered w3-border" style="background:grey;width:100%;border:1px solid black;">
+            <thead>
+            <th width="33.33%" class=" w3-border" ng-click="sortData('DepartureTime')">Dep Time&nbsp;<div ng-class="getSortClass('DepartureTime')"></div></th><th class=" w3-border" width="33.33%" ng-click="sortData('fare.totalfare - 0')">Price&nbsp;<div ng-class="getSortClass('fare.totalfare - 0')"></div></th><th class=" w3-border" width="33.33%" ng-click="sortData('rating')">Rating&nbsp;<div ng-class="getSortClass('rating')"></div></th>
+            </thead></table>
+    </div>
+        </section>
+    
+    <section >   <!-- Modify Section -->
+      
+  
+  <button style="width:50%;bottom:0;left:0;position:fixed;z-index:3" onclick="closeOnSelectDemo();document.getElementById('id01').style.display='block'" class="w3-button w3-teal">Modify Date</button>
+
+  <div id="id01" class="w3-modal" style="">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div style="margin-top:100px" class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <br><br>
+<div class="embed-submit-field" id='dtpickerdemo'>
+      <input class="w3-input w3-border w3-large w3-round-large" ng-model="doj" type="text" placeholder="Date Of Journey" onclick="closeOnSelectDemo()" id="seldate" readonly="readonly"/>
+     
+    </div><br><br>
+          <p> <button class="w3-btn w3-block w3-round" style="background-color:#37C88D" ng-click="change();">Modify Date</button></p>
+      </div>
+    </div>
+  </div>
+
+        </section>
+    <div class="sampleContainer" ng-show="myVar">
+    <div class="loader">
+        <span class="dot dot_1"></span>
+        <span class="dot dot_2"></span>
+        <span class="dot dot_3"></span>
+        <span class="dot dot_4"></span>
+    </div>
+</div>
+    
+    <section> <!-- Bus Listing -->
+        <div class="content-wrap">
+           <div ng-hide="myVar" style="margin-bottom:40px" ng-repeat="y in banData">
+              
+    <div class="w3-display-container w3-text-black" ng-repeat="m in y.onwardflights | orderBy:sortColumn:reverseSort " style="border: solid 2px white;">
+   <img src="assets/images/bgbusshow.jpg" alt="busshow" style="height:100px;width:100%">
+    <div class="w3-large w3-padding w3-display-topleft" style="white-space: nowrap; width: 13em; font-weight:bold;overflow: hidden; text-overflow: ellipsis;">{{m.TravelsName}}</div>
+    <div class="w3-padding w3-display-topright w3-show-small w3-hide-medium w3-hide-large">Rs.{{m.fare.totalfare}}</div>
+        <div class="w3-padding w3-display-topright w3-hide-small w3-xlarge">Rs.{{m.fare.totalfare}}</div>
+        <div class="w3-padding w3-display-bottomleft" style="white-space: nowrap; width: 13em; overflow: hidden; text-overflow: ellipsis;">{{m.BusType}}</div>
+    <div class="w3-padding w3-display-bottomright"><button class="w3-teal w3-btn" style="cursor:pointer;">Book</button></div>
+    <div class="w3-padding w3-display-topmiddle"></div>
+    <div class="w3-padding w3-display-left">{{m.DepartureTime}}-{{m.ArrivalTime}}({{m.duration}})</div>
+    <div class="w3-padding w3-display-right w3-small" style="font-weight:bold;">{{m.RouteSeatTypeDetail.list[0].SeatsAvailable}} Seats</div>
+    <div class="w3-padding w3-display-middle w3-hide-small ">{{m.rating}} Stars</div>
+    <div class="w3-padding w3-display-bottommiddle"></div>
+               </div>
+            <div ng-show="!y.onwardflights.length">
+                  <div class="w3-panel w3-card-12">
+            <h1> Oh ! No !</h1>
+                      
+                      <p>
+                          No Buses Found for this route today. </p>
+                      <p>Try with Different Routes or Dates.
+            </p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="assets/datepicker/datepickk.min.js"></script>
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+ <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/viewport-checker/jquery.viewportchecker.js"></script>
+  <script src="assets/coupongrid/js/modernizr.custom.js"></script>
+  <script src="assets/masonry/masonry.pkgd.min.js"></script>
+  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/bootstrap-carousel-swipe/bootstrap-carousel-swipe.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+    <script src="assets/coupongrid/js/classie.js"></script>
+   <script src="assets/coupongrid/js/angular.js"></script>
+  <script src="assets/coupongrid/js/arrayfile.js"></script>
+ 
+    
+    
+    
+<script>
+	var datepicker = new Datepickk();
+    var d = new Date();
+    d.setDate(d.getDate() - 1);
+    datepicker.minDate = d;
+ 					function closeOnSelectDemo(){
+						datepicker.unselectAll();
+                        datepicker.button = 'Close me';
+						datepicker.closeOnSelect = true;
+                        console.log(datepicker.closeOnSelect);
+						datepicker.onSelect = function(checked){
+                            document.getElementById("seldate").value = this.toLocaleDateString("en-ZA");
+						};                        
+						datepicker.onClose = function(){
+							datepicker.closeOnSelect = false;
+							datepicker.onClose = null;
+						}
+						datepicker.show();
+					}
+</script> 
+    
+  <input name="animation" type="hidden">
+  </body>
+</html>
